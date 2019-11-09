@@ -1,0 +1,316 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0;
+}
+header {
+    background-image: url(./images/image.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 747px;
+    width: 100%;
+    height: 747px;
+}
+.header {
+    position: absolute;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 95px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.85);
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    0% {
+        font-size: 95px;
+    }
+    100% {
+        font-size: 116px;
+        color: #FAF7BA;
+        text-shadow: 0px 0px 64px rgba(210, 214, 30, 0.85);
+    }
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.87);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.menu li {
+    position: relative;
+    flex-basis: 25% 64px;
+    flex-grow: 1;
+    text-align: center;
+}
+.menu li a {
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 15px 0px 15px;
+}
+.icon {
+    display: none;
+    color: white;
+    list-style-type: none;
+    text-align: left;
+}
+.menu li ul {
+    display: flex;
+    display: block;
+    position: absolute;
+    display: none;
+    background-color: white; 
+    width: 100%;
+    height: 142px;
+    list-style-type: none;
+    padding: 0;
+}
+.button {
+    position: relative;
+}
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid white;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    left: 70%;
+    bottom: 40%;
+}
+.menu li ul li a {
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 0px 5px 20px;
+}
+li:hover > ul {
+    display: block;
+}
+li ul li a:hover {
+    background: #D1D1D1;
+}
+li ul li a:active {
+    color: white;
+    background: #717171;
+    text-decoration: none;
+}
+li a:hover {
+    background: rgba(209, 209, 209, 0.8);
+    color: black;
+}
+li a:active {
+    background: rgba(248, 248, 248, 0.8);
+    text-decoration: underline;
+    color: #000000;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 350);
+    grid-template-rows: repeat(3, 285px);
+    grid-template-areas:
+        "card1 . card3"
+        "card4 card4 card6"
+        "card5 card2 card2";
+    grid-column-gap: 85px;
+    grid-row-gap: 48px;
+    margin: 80px 100px;
+}
+.cards div {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-repeat: no-repeat;
+    padding: 0px 0px 85px 0px;
+    color: #000000;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 
+                0px 2px 2px rgba(0, 0, 0, 0.14);
+   }
+h2 {
+    display: block;
+    position: absolute;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 24px;
+    left: 5%;
+    top: 80%;
+    line-height: 3px;
+}
+p {
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    left: 5%;
+    top: 87%;
+    color: rgba(0, 0, 0, 0.54);
+}
+.card2 h2, .card4 h2 {
+    left: 2.5%;
+}
+.card2 p, .card4 p {
+    left: 2.5%;
+}
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px 8px 0px 0px;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    padding-top: 60px;
+    display: none;
+}
+.card2:hover .photo, .card4:hover .photo {
+    display: block;
+    height: 140px;
+    transition-duration: 3s;
+
+}
+.card1, .card3, .card5, .card6 {
+    background-size: 100% 200px;
+    border-radius: 24px 0px 24px 0px;
+}
+.card2, .card4 {
+    background-size: 100% 200px;
+    border-radius: 8px 0px 8px 0px;
+}
+.card1 { 
+    grid-area: card1;
+    background-image: url(./images/image\ 1.png);
+}
+.card2 {
+    grid-area: card2;
+    background-image: url(./images/image\ 2.png);
+}
+.card3 {
+    grid-area: card3;
+    background-image: url(./images/unnamed\ 1.png);
+}
+.card4 {
+    grid-area: card4;
+    background-image: url(./images/image\ 3.png);
+}
+.card5 {
+    grid-area: card5;
+    background-image: url(./images/image\ 4.png);
+}
+.card6 {
+    grid-area: card6;
+    background-image: url(./images/image\ 5.png);
+}
+.card1:hover, .card3:hover, 
+.card5:hover, .card6:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.12), 
+                0px 8px 10px rgba(0, 0, 0, 0.14), 
+                0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: linear 20ms;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 64px;
+    padding: 0px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #555555;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
+}
+@media all and (max-width: 1024px) {
+    header {
+        height: 600px;
+    }
+        @keyframes spin {
+            0% {
+                font-size: 64px;
+            }
+            100% {
+                font-size: 77px;
+                color: #FAF7BA;
+                text-shadow: 0px 0px 64px rgba(210, 214, 30, 0.85);
+            }
+        }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 350);
+        grid-template-rows: repeat(4, 285px);
+        grid-template-areas:
+            "card1 card3"
+            "card4 card4" 
+            "card2 card2"
+            "card5 card6";
+        grid-column-gap: 80px;
+        grid-row-gap: 32px;
+        margin: 80px 100px 40px;
+    }
+}
+@media all and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 464px;
+        background-color: black;
+        margin: 0;
+    }
+    @keyframes spin {
+        0% {
+            font-size: 36px;
+        }
+        100% {
+            font-size: 44px;
+            color: #FAF7BA;
+            text-shadow: 0px 0px 64px rgba(210, 214, 30, 0.85);
+        }
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 350);
+        grid-template-rows: repeat(6, 285px);
+        grid-template-areas:
+            "card1"
+            "card3"
+            "card4" 
+            "card2"
+            "card5"
+            "card6";
+        grid-column-gap: 80px;
+        grid-row-gap: 32px;
+        margin: 80px 100px 40px;
+        grid-template-columns: repeat(auto-fill, 350px);
+    }
+    footer {
+        height: 48px;
+        margin: 0;
+    }
+    .menu li a {
+        display: none;
+    }
+    .icon {
+        display: block;
+        font-size: 5px;
+        padding: 18px 16px;
+        background-color: black;
+        margin: 0;
+        text-align: end;
+    } 
+}
