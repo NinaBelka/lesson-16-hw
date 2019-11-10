@@ -48,6 +48,7 @@ header {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    transform: translate(1.2);
 }
 .menu li {
     position: relative;
@@ -60,7 +61,7 @@ header {
     display: block;
     font-size: 24px;
     color: #FFFFFF;
-    padding: 15px 0px 15px;
+    padding: 15px 0px;
 }
 .icon {
     display: none;
@@ -70,14 +71,13 @@ header {
 }
 .menu li ul {
     display: flex;
-    display: block;
     position: absolute;
     display: none;
     background-color: white; 
     width: 100%;
     height: 142px;
     list-style-type: none;
-    padding: 0;
+    padding: 15px 0px 0px;
 }
 .button {
     position: relative;
@@ -96,8 +96,8 @@ header {
     text-align: left;
     color: black;
     font-size: 18px;
-    margin-top: 10px;
-    padding: 5px 0px 5px 20px;
+    padding: 6px 15px 6px 24px;
+    margin: 6px 0px;
 }
 li:hover > ul {
     display: block;
@@ -121,7 +121,7 @@ li a:active {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 350);
+    grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(3, 285px);
     grid-template-areas:
         "card1 . card3"
@@ -136,36 +136,36 @@ li a:active {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-repeat: no-repeat;
-    padding: 0px 0px 85px 0px;
-    color: #000000;
+    height: 285px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 
                 0px 2px 2px rgba(0, 0, 0, 0.14);
    }
+img {
+    width: 100%;
+    height: 200px;
+   }
 h2 {
-    display: block;
-    position: absolute;
-    margin: 0px;
-    font-weight: 600;
     font-size: 24px;
-    left: 5%;
-    top: 80%;
-    line-height: 3px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 12px 0px 0px 16px;
 }
 p {
-    position: absolute;
-    margin: 0px;
     font-size: 12px;
-    left: 5%;
-    top: 87%;
     color: rgba(0, 0, 0, 0.54);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 0px 4px 16px;
 }
-.card2 h2, .card4 h2 {
-    left: 2.5%;
+.card2 h2, p, .card4 h2, p {
+    left: 20px;
 }
-.card2 p, .card4 p {
-    left: 2.5%;
-}
+
 .photo {
     position: absolute;
     display: block;
@@ -186,40 +186,32 @@ p {
     bottom: 85px;
 }
 .card1, .card3, .card5, .card6 {
-    background-size: 100% 200px;
     border-radius: 24px 0px 24px 0px;
 }
 .card2, .card4 {
-    background-size: 100% 200px;
     border-radius: 8px 0px 8px 0px;
 }
 .card1 { 
     grid-area: card1;
-    background-image: url(./images/image\ 1.png);
 }
 .card2 {
     grid-area: card2;
-    background-image: url(./images/image\ 2.png);
 }
 .card3 {
     grid-area: card3;
-    background-image: url(./images/unnamed\ 1.png);
 }
 .card4 {
     grid-area: card4;
-    background-image: url(./images/image\ 3.png);
 }
 .card5 {
     grid-area: card5;
-    background-image: url(./images/image\ 4.png);
 }
 .card6 {
     grid-area: card6;
-    background-image: url(./images/image\ 5.png);
 }
 .card1:hover, .card3:hover, 
 .card5:hover, .card6:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.1);
     box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.12), 
                 0px 8px 10px rgba(0, 0, 0, 0.14), 
                 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -231,7 +223,7 @@ footer {
     align-items: center;
     flex-direction: row;
     height: 64px;
-    padding: 0px 15px;
+    padding: 0px 24px;
     font-size: 16px;
     color: white;
     background-color: #555555;
@@ -253,14 +245,13 @@ footer {
         }
     .cards {
         display: grid;
-        grid-template-columns: repeat(2, 350);
+        grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(4, 285px);
         grid-template-areas:
             "card1 card3"
             "card4 card4" 
             "card2 card2"
             "card5 card6";
-        grid-column-gap: 80px;
         grid-row-gap: 32px;
         margin: 80px 100px 40px;
     }
@@ -285,7 +276,7 @@ footer {
     }
     .cards {
         display: grid;
-        grid-template-columns: repeat(1, 350);
+        grid-template-columns: repeat(1, 350px);
         grid-template-rows: repeat(6, 285px);
         grid-template-areas:
             "card1"
@@ -294,22 +285,27 @@ footer {
             "card2"
             "card5"
             "card6";
-        grid-column-gap: 80px;
-        grid-row-gap: 32px;
-        margin: 80px 100px 40px;
-        grid-template-columns: repeat(auto-fill, 350px);
+        margin: 32px;
+        justify-content: center;
+    }
+    .card2, .card4 {
+        width: 350px;
+        height: 285px;
     }
     footer {
         height: 48px;
         margin: 0;
+        padding: 0px 12px;
+        font-size: 12px;
     }
     .menu li a {
         display: none;
     }
     .icon {
         display: block;
-        font-size: 5px;
-        padding: 18px 16px;
+        font-size: 8px;
+        font-weight: 600;
+        padding: 5px 16px;
         background-color: black;
         margin: 0;
         text-align: end;
