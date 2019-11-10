@@ -168,21 +168,22 @@ p {
 }
 .photo {
     position: absolute;
+    display: block;
     width: 100%;
-    height: 0px;
+    height: 140px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 8px 8px 0px 0px;
     color: white;
     text-align: center;
     font-size: 48px;
     padding-top: 60px;
-    display: none;
+    transition-timing-function: linear;
+    bottom: 100%;
+    transition-duration: 300ms;
 }
 .card2:hover .photo, .card4:hover .photo {
-    display: block;
-    height: 140px;
-    transition-duration: 3s;
-
+    transition-duration: 300ms;
+    bottom: 85px;
 }
 .card1, .card3, .card5, .card6 {
     background-size: 100% 200px;
